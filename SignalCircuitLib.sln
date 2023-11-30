@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalCircuitLib", "SignalCircuitLib.csproj", "{D2B48A43-AA7B-4684-8850-E70F005E6763}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalCircuitLibTest", "..\SignalCircuitLibTest\SignalCircuitLibTest.csproj", "{D3B5A3AD-398C-4531-98C3-1AFCBD7955BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D2B48A43-AA7B-4684-8850-E70F005E6763}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2B48A43-AA7B-4684-8850-E70F005E6763}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2B48A43-AA7B-4684-8850-E70F005E6763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3B5A3AD-398C-4531-98C3-1AFCBD7955BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B5A3AD-398C-4531-98C3-1AFCBD7955BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B5A3AD-398C-4531-98C3-1AFCBD7955BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B5A3AD-398C-4531-98C3-1AFCBD7955BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
