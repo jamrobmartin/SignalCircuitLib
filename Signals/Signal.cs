@@ -1,6 +1,4 @@
-﻿using System.Xml.Serialization;
-
-namespace SignalCircuitLib
+﻿namespace SignalCircuitLib.Signals
 {
     public class Signal
     {
@@ -31,15 +29,19 @@ namespace SignalCircuitLib
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
+            if (obj.GetType() != GetType()) return false;
             return Equals((Signal)obj);
         }
 
         public override string ToString()
         {
-            return _value ? "High" : "Low"; 
+            return _value ? "High" : "Low";
         }
 
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 
     public class SignalGenerator
@@ -62,7 +64,7 @@ namespace SignalCircuitLib
             }
         }
 
-        public event EventHandler<SignalChangedEventArgs> SignalChanged = delegate{ };
+        public event EventHandler<SignalChangedEventArgs> SignalChanged = delegate { };
     }
 
     public class SignalReceiver
@@ -78,7 +80,7 @@ namespace SignalCircuitLib
             _signal = e.Signal;
         }
 
-        
+
     }
 
     public class SignalChangedEventArgs : EventArgs
