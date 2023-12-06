@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SignalCircuitLib.Signals;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,8 @@ namespace SignalCircuitLib.Component
     {
         public override void UpdateState()
         {
-            Output = !(sigInput1 || sigInput2);
-            base.UpdateState();
+            Signal sigOutput = !(Input1.sigInput || Input2.sigInput);
+            Output.ChangeOutput(sigOutput);
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using SignalCircuitLib;
+using SignalCircuitLib.Signals;
 
 namespace SignalCircuitLib.Component
 {
@@ -12,9 +13,8 @@ namespace SignalCircuitLib.Component
     {
         public override void UpdateState()
         {
-            Output = sigInput1 && sigInput2;
-
-            base.UpdateState();
+            Signal sigOutput = Input1.sigInput && Input2.sigInput;
+            Output.ChangeOutput(sigOutput);
         }
     }
 }

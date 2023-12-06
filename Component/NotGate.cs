@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using SignalCircuitLib.Signals;
+
 namespace SignalCircuitLib.Component
 {
     public class OneInputNotGate : OneInputLogicGate
     {
         public override void UpdateState()
         {
-            Output = !sigInput1;
-            base.UpdateState();
+            Signal sigOutput = !Input.sigInput;
+            Output.ChangeOutput(sigOutput);
         }
     }
 }
